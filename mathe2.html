@@ -1,0 +1,69 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="jsxgraph.css" />
+  <script src="jsxgraphcore.js"></script>
+</head>
+
+<body>
+
+	<div id="box" class="jxgbox" style="position: absolute; top:12px; left:520px; width:600px; height:600px;"></div>
+
+	<script src="mathe.js"></script>
+
+	
+	<script>
+
+		function drawMath() {
+		
+			leernTaffel();
+			/*
+			var codeLines = document.getElementById('codeArea').value.split("\n");    
+
+			for (line in codeLines) {
+				
+				if (codeLines[line].trim().length > 0) {
+					eval(codeLines[line]);
+				}
+			} */
+			
+			eval(document.getElementById('codeArea').value);
+		}
+	</script>
+	
+	
+	<div id="codeDiv" class="jxgbox" style="position: absolute; top:10px; left:10px; width:300px; height:600px;">
+
+		<textarea id='codeArea' rows="33" cols="40" outline ="none">
+	
+ G = Punkte('G', 2, 2);
+ c = Kreis(G, 2);
+
+ H = Punkte('H', 1, 2);
+ I = Punkte('I', 2, 3);
+
+ l1 = Gerade(H, I);
+
+ i1 = Querung1(c, l1, 'moo');
+ i2 = Querung2(c, l1, 'boo');
+
+
+ l2 = Gerade(G, i1);
+ 
+ HG = Strecke(H, G);
+ pp = Mittelsenkrechte(HG);
+
+ X = Querung1(c, pp, 'X'); 
+	
+		</textarea>
+
+		<button onClick="drawMath()"> Zeichne! </button>
+	
+	</div>
+
+
+
+
+
+</body>
+</html>
