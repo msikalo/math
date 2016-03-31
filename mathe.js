@@ -8,8 +8,8 @@ matheDiv.id = 'box';
 
 function neueTaffel() {
 	
-	Taffel = JXG.JSXGraph.initBoard('box', {boundingbox: [-5, 5, 5, -5], axis:true});	
-	Taffel.showCopyright = false;
+	Taffel = JXG.JSXGraph.initBoard('box', {boundingbox: [-5, 5, 5, -5], axis:true, showCopyright:false});	
+	//Taffel.;
 }
 
 neueTaffel();

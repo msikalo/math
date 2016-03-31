@@ -3,11 +3,36 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="jsxgraph.css" />
   <script src="jsxgraphcore.js"></script>
+  
+  <link rel="stylesheet" href="stylesheets/styles.css">
+  <link rel="stylesheet" href="stylesheets/github-light.css">
+  <script src="javascripts/scale.fix.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  
 </head>
 
 <body>
 
-	<div id="box" class="jxgbox" style="position: absolute; top:12px; left:520px; width:600px; height:600px;"></div>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Math</h1>
+        <p class="header"></p>
+
+        <ul>
+          <li class="download"><a class="buttons github" href="index.html">Home</a></li>
+        </ul>
+		
+		
+      </header>
+
+  <section>
+  
+
+	<div id="box" class="jxgbox" style="position: absolute; top:12px; left:680px; width:600px; height:610px;"></div>
 
 	<script src="mathe.js"></script>
 
@@ -31,39 +56,56 @@
 		}
 	</script>
 	
-	
-	<div id="codeDiv" class="jxgbox" style="position: absolute; top:10px; left:10px; width:300px; height:600px;">
+	<div id="codeDiv" class="wrapper" style="position: absolute; top:10px; left:260px; width:360px; height:700px;">
 
-		<textarea id='codeArea' rows="33" cols="40" outline ="none">
+
+		<textarea id='codeArea' rows="38" cols="47" outline ="none">
 	
+ // die Punkte
  G = Punkte('G', 2, 2);
+ 
+ // Kreis um die Punkte
  c = Kreis(G, 2);
 
+ // noch 2 Punkte
  H = Punkte('H', 1, 2);
  I = Punkte('I', 2, 3);
 
+ // die Gerade durch 2 gegebene Punkte
  l1 = Gerade(H, I);
 
+ // die Punkte der Querung der Gerade und Kreis
  i1 = Querung1(c, l1, 'moo');
  i2 = Querung2(c, l1, 'boo');
 
 
  l2 = Gerade(G, i1);
  
+ // die Strecke
  HG = Strecke(H, G);
+ 
+ // die Mittlesenkrechte (Gerade)
  pp = Mittelsenkrechte(HG);
 
  X = Querung1(c, pp, 'X'); 
 	
 		</textarea>
-
-		<button onClick="drawMath()"> Zeichne! </button>
+		
+		<a class="mathbutton" onClick="drawMath()">Zeichne!</a>
 	
 	</div>
 
 
 
+   </section>
+   
+      <footer>
 
+	  
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+	
 
 </body>
 </html>
